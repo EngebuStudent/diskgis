@@ -1,0 +1,29 @@
+.map-container {
+  position: relative;
+  width: 100%; /* Take up the remaining space */
+  height: 100vh; /* Full viewport height */
+}
+
+.map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%; /* Adjusted to fill the container */
+}
+
+.root-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.map-menu-container {
+  flex: 1; /* Make the menu container flexible to occupy remaining space */
+  height: 100vh;
+  overflow-y: auto;
+}

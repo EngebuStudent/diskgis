@@ -1,0 +1,207 @@
+:root {
+  --background: #0077b6 ;
+  --navbar-width: 256px;
+  --navbar-width-min: 80px;
+  --navbar-dark-primary: #0077b6 ; /* Dark gray */
+  --navbar-dark-secondary: #0077b6 ;
+  --navbar-light-primary: #0077b6 ;
+  --navbar-light-secondary: #0077b6 ;
+}
+
+/* General styles for active and disabled layers */
+.active-layer {
+  color: #000000; /* White */
+}
+
+.disabled-layer {
+  color: #a39999; /* Light gray */
+}
+
+.menu-layer {
+  cursor: pointer;
+}
+
+/* Styling for layers */
+.layer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  padding: 0.4em;
+  margin: 4px 10px;
+  background-color: #00b4d8 ; /* Dark gray */
+  border-radius: 10px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Styling for the menu container */
+.menu-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 20vw;
+  background-color: #0077b6  ; /* Dark gray */
+  padding: 0;
+  overflow-y: auto;
+  border-left: 1px solid #c5c0c0;
+  min-width: 250px;
+}
+
+/* Styling for collapsible headers */
+.collapsible-header {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: #0077b6  ; /* Dark gray */
+}
+
+/* Styling for collapsible content */
+.Collapsible__contentOuter {
+  background-color: #0077b6  ; /* Dark gray */
+}
+
+/* Styling for menu header icons */
+.menu-header-icon {
+  height: 20px;
+  width: 20px;
+}
+
+/* Acknowledgement styling */
+.acknowledgement {
+  font-size: 0.5em;
+  height: 2%;
+}
+
+/* Styling for tools */
+.tool {
+  background-color: #00b4d8 ; /* Dark gray */
+  margin: 4px;
+  padding: 0.4em;
+  border-radius: 10px;
+  font-size: 1em;
+}
+
+.tool select {
+  width: 70%;
+  margin: 3px 3px 3px 0;
+}
+
+.tool input[type=submit] {
+  float: right;
+  cursor: pointer;
+}
+
+.bufferDist {
+  width: 15%;
+  margin: 3px;
+}
+
+/* Styling for tools menu container */
+.tools-menu-container {
+  background-color: #1d1d1d; /* Dark gray */
+  height: 80%;
+  overflow: scroll;
+}
+
+.layers-menu-container {
+  margin-bottom: 0;
+}
+
+
+
+/* Styling for forms */
+form {
+  border-radius: 0;
+}
+
+/* Styling for select inputs */
+select {
+  border-radius: 0;
+}
+
+/* Styling for map and tools menu container overflow */
+.map-menu-container,
+.tools-menu-container {
+  overflow-y: hidden;
+}
+
+/* Styling for map menu container */
+.map-menu-container {
+  position: relative;
+  flex: 1;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: var(--navbar-dark-primary);
+  padding: 10px;
+}
+
+/* Styling for map menu icon */
+.map-menu-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 40px;
+  width: 40px;
+  z-index: 2;
+}
+
+/* Button styling */
+.map-menu-container button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  background-color: #555;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.map-menu-container button:hover {
+  background-color: #666;
+}
+
+/* Styling for tool items */
+.map-menu-container .tool-item {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.map-menu-container .tool-item select, .map-menu-container .tool-item input {
+  width: 100%;
+  margin-top: 5px;
+}
+
+/* Styling for layer and tool items */
+.map-menu-container .layer-item, .map-menu-container .tool-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #444;
+}
+
+/* Styling for hover effect */
+.map-menu-container .layer-item:hover, .map-menu-container .tool-item:hover {
+  background-color: #444;
+  cursor: pointer;
+}
+
+/* Styling for icons */
+.map-menu-container .icon {
+  margin-right: 10px;
+}
+
+/* Styling for select and input elements */
+.map-menu-container select, .map-menu-container input {
+  margin-left: 10px;
+  padding: 5px;
+  border: 1px solid #555;
+  border-radius: 3px;
+  background-color: #222;
+  color: white;
+}
