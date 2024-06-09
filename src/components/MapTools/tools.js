@@ -46,15 +46,7 @@ export function createIntersectionLayer(layer1, layer2, name) {
     }
 }
 
-/**
- * Measures the length of a line layer.
- * @param {Object} layer - The GeoJSON line layer.
- * @param {string} name - The name of the layer.
- */
-export function measureLineLength(layer, name) {
-    const length = turf.length(layer, { units: 'meters' });
-    alert(`The length of ${name} is ${length.toFixed(2)} meters`);
-}
+
 
 /**
  * Measures the area of a polygon layer.

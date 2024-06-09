@@ -4,8 +4,8 @@ import './menu.css'; // Import your CSS file
 import menuIcon from '../Icons/menu-icon.png';
 import ToolMenu from './ToolMenu.js';
 import { HideIcon, ShowIcon } from '../Icons/index.js';
-import { createBufferedLayer, createUnionLayer, createIntersectionLayer, createDifferenceLayer, measureLineLength, measureArea } from '../MapTools/tools.js';
-
+import { createBufferedLayer, createUnionLayer, createIntersectionLayer, createDifferenceLayer, measureArea } from '../MapTools/tools.js';
+import diskgolf from '../Icons/diskgolf.png';
 
 // Function for rendering individual layers in the layer menu
 function LayerDiv(props) {
@@ -26,7 +26,7 @@ function LayerDiv(props) {
   }
 }
 
-// MapMenu component
+// Main MapMenu component that renders the layer and tool menus
 class MapMenu extends Component {
   constructor(props) {
     super(props);
@@ -34,8 +34,9 @@ class MapMenu extends Component {
     this.handleBufferSubmit = this.handleBufferSubmit.bind(this);
     this.handleOtherSubmit = this.handleOtherSubmit.bind(this);
     this.handleMeasurementSubmit = this.handleMeasurementSubmit.bind(this);
+    
   }
-  //
+  // Function for rendering the list of layers in the layer menu
   renderLayerList = (layers, visibleLayers) => {
     return layers.map(layer => {
       const active = visibleLayers.includes(layer);
@@ -55,9 +56,11 @@ class MapMenu extends Component {
         </div>
       );
     });
-  }
+  }   
 
-  // Handler for layer click event
+
+
+  // Handler for layer click event (show/hide layer)
   handleLayerOnClick = (id, event) => {
     const { layers, visibleLayers } = this.props;
     let updatedLayers = [];
@@ -105,16 +108,15 @@ class MapMenu extends Component {
     if (newLayer) this.props.addLayer(newLayer);
   }
 
-  // Handler for measurement tool submit (line length, area)
+  // Handler for measurement tool submit (area)
   handleMeasurementSubmit(event) {
     event.preventDefault();
     const toolType = event.target.className;
     const layerID = event.target.getElementsByClassName("measurement-select")[0].value;
-    const layer = this.props.layers.find(layer => layer.id === layerID);
+    const layer = this.props.layers.find(layer => layer.id === layerID);     
+
     switch (toolType) {
-      case 'line-length-form':
-        measureLineLength(layer.source.data, layerID);
-        break;
+      
       case 'area-form':
         measureArea(layer.source.data, layerID);
         break;
@@ -125,13 +127,13 @@ class MapMenu extends Component {
 
   render() {
     const { layers, visibleLayers } = this.props;
-
     const layerMenuHeading = <div className="collapsible-header"><h1>Layers</h1> <img className="menu-header-icon" src={menuIcon} alt="menu icon" /></div>;
     const toolsMenuHeading = <div className="collapsible-header"><h1>Tools</h1> <img className="menu-header-icon" src={menuIcon} alt="menu icon" /></div>;
 
     return (
       <div className="menu-container">
-        <div className="layers-menu-container" >
+      
+          <div className="layers-menu-container" >
           <Collapsible trigger={layerMenuHeading} open={true}>
             {this.renderLayerList(layers, visibleLayers)}
           </Collapsible>

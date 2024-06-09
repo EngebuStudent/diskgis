@@ -9,7 +9,7 @@ function ToolMenu(props) {
       <UnionTool handleOtherToolSubmit={props.handleOtherToolSubmit} layers={props.layers} />
       <IntersectionTool handleOtherToolSubmit={props.handleOtherToolSubmit} layers={props.layers} />
       <DifferenceTool handleOtherToolSubmit={props.handleOtherToolSubmit} layers={props.layers} />
-      <LineLengthTool handleMeasurementSubmit={props.handleMeasurementSubmit} layers={props.layers} />
+      
       <AreaTool handleMeasurementSubmit={props.handleMeasurementSubmit} layers={props.layers} />
     </div>
   );

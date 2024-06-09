@@ -2,19 +2,19 @@
   --background: #0077b6 ;
   --navbar-width: 256px;
   --navbar-width-min: 80px;
-  --navbar-dark-primary: #0077b6 ; /* Dark gray */
-  --navbar-dark-secondary: #0077b6 ;
+  --navbar-dark-primary: #0077b6 ; /* Dark blue */
+  --navbar-dark-secondary: #0077b6 ; 
   --navbar-light-primary: #0077b6 ;
   --navbar-light-secondary: #0077b6 ;
 }
 
 /* General styles for active and disabled layers */
 .active-layer {
-  color: #000000; /* White */
+  color: #000000; /* Black */
 }
 
 .disabled-layer {
-  color: #a39999; /* Light gray */
+  color: #c1c1c1; /* Light gray */
 }
 
 .menu-layer {
@@ -29,7 +29,7 @@
   width: 90%;
   padding: 0.4em;
   margin: 4px 10px;
-  background-color: #00b4d8 ; /* Dark gray */
+  background-color: #00b4d8 ; 
   border-radius: 10px;
   font-size: 1em;
   font-weight: 600;
@@ -43,10 +43,10 @@
   right: 0;
   bottom: 0;
   width: 20vw;
-  background-color: #0077b6  ; /* Dark gray */
+  background-color: #0077b6  ; 
   padding: 0;
   overflow-y: auto;
-  border-left: 1px solid #c5c0c0;
+  border-left: 1px solid #0077b6;
   min-width: 250px;
 }
 
@@ -103,7 +103,7 @@
 
 /* Styling for tools menu container */
 .tools-menu-container {
-  background-color: #1d1d1d; /* Dark gray */
+  background-color: #0077b6; /* Dark gray */
   height: 80%;
   overflow: scroll;
 }
