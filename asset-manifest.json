@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/react-gh-pages/static/css/main.cd9ab69c.css",
+    "main.js": "/react-gh-pages/static/js/main.af5c6870.js",
+    "static/media/diskgolf.png": "/react-gh-pages/static/media/diskgolf.091970e8c1a1e334eed0.png",
+    "index.html": "/react-gh-pages/index.html",
+    "main.cd9ab69c.css.map": "/react-gh-pages/static/css/main.cd9ab69c.css.map",
+    "main.af5c6870.js.map": "/react-gh-pages/static/js/main.af5c6870.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd9ab69c.css",
+    "static/js/main.af5c6870.js"
+  ]
+}
