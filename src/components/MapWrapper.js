@@ -1,8 +1,14 @@
+
 import React, { Component } from 'react';
 import Map from './Map/Map';
 import MapMenu from './MapMenu/MapMenu';
 import allLayers from './datasets/layers';
 
+/**
+ * MapWrapper component is a React component that serves as a wrapper for the Map and MapMenu components.
+ * It manages the state of the visible layers, background map style, and map visibility.
+ * It also provides methods to add a new layer to the map, update the visible layers, and update the background map style.
+ */
 class MapWrapper extends Component {
   constructor(props) {
     super(props);
@@ -55,6 +61,7 @@ class MapWrapper extends Component {
     this.setState({ backgroundMap: newStyle });
     this.mapElement.current.switchMapStyle(newStyle);
   }
+  // Render the MapWrapper component
 
   render() {
     const { allAvailableLayers, visibleLayers, backgroundMap, showMap } = this.state;
