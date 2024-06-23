@@ -124,7 +124,8 @@ class MapMenu extends Component {
         console.log("ToolType not recognized");
     }
   }
-
+   // render the menu
+  
   render() {
     const { layers, visibleLayers } = this.props;
     const layerMenuHeading = <div className="collapsible-header"><h1>Layers</h1> <img className="menu-header-icon" src={menuIcon} alt="menu icon" /></div>;
