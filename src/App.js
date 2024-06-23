@@ -5,7 +5,7 @@ import diskGolfIcon from './components/Icons/diskgolf.png'; // Adjust the path a
 
 function App() {
   return (
-    <BrowserRouter>
+
     <div className="App">
       <header className="App-header">
         <div className="header-content">
@@ -15,7 +15,7 @@ function App() {
       </header>
       <MapWrapper />
     </div>
-    </BrowserRouter>
+
   );
   
 }
